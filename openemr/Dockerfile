@@ -22,8 +22,10 @@ FROM php:7.3-apache
 # Useful tools to find stuff on debian:
 # ------------------------------------
 # apt-cache search libxml2
-# apt-file find png.h 
-RUN git clone https://github.com/openemr/openemr.git --branch rel-502 --depth 1
+# apt-file find png.h
+
+RUN apt update && apt install -y git build-base libffi-dev python-dev \
+ && git clone https://github.com/openemr/openemr.git --branch rel-502 --depth 1
 COPY openemr/ /var/www/html/
 
 # Note: docker-php-ext-install also enables the module after installation.
