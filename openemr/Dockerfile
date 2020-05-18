@@ -17,7 +17,7 @@ FROM php:7.3-apache
 # ---------------------------------------------------------------------
 # perl mysql-client tar curl imagemagick nodejs nodejs-npm \
 # python openssl py-pip openssl-dev dcron shadow \
-# git build-base libffi-dev python-dev \
+# git \
 
 # Useful tools to find stuff on debian:
 # ------------------------------------
